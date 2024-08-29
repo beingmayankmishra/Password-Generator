@@ -155,6 +155,7 @@ h1 {
     color: var(--vb-yellow);
     font-weight: 600;
     font-size: 1.25rem;
+    cursor: pointer;
   }
 
 .check {
@@ -188,7 +189,7 @@ h1 {
     font-weight: 600;
     left:50%;
     top:-3.5px;
-    transform: translateX(-50%)  translateY(40%);
+    transform: translateX(-53%)  translateY(19%);
 }
 
 .check label {
@@ -253,6 +254,9 @@ h1 {
     transition: all 100ms ease-in;
 }
 
+
+    /* outline over slider */
+    
 .slider:focus{
     outline: 3px solid var(--vb-yellow);
 }

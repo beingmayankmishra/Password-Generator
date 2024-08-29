@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Random Password Generator</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%3E%3Cpath%20fill%3D%22%236c19ff%22%20d%3D%22M38%2C23h-4v-7c0-5.514-4.486-10-10-10s-10%2C4.486-10%2C10v7h-4v-7c0-7.72%2C6.28-14%2C14-14s14%2C6.28%2C14%2C14%20V23z%22%3E%3C%2Fpath%3E%3Crect%20width%3D%2236%22%20height%3D%2226%22%20x%3D%226%22%20y%3D%2217%22%20fill%3D%22%23f5bc00%22%3E%3C%2Frect%3E%3Crect%20width%3D%224%22%20height%3D%224%22%20x%3D%2210%22%20y%3D%2217%22%20fill%3D%22%23eb7900%22%3E%3C%2Frect%3E%3Crect%20width%3D%224%22%20height%3D%224%22%20x%3D%2234%22%20y%3D%2217%22%20fill%3D%22%23eb7900%22%3E%3C%2Frect%3E%3Cg%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2231%22%20r%3D%222%22%20fill%3D%22%236c19ff%22%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2231%22%20r%3D%222%22%20fill%3D%22%236c19ff%22%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2231%22%20r%3D%222%22%20fill%3D%22%236c19ff%22%3E%3C%2Fcircle%3E%3C%2Fg%3E%3C%2Fsvg%3E" type="image/svg+xml">
+
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -25,8 +27,8 @@
 
             <input readonly placeholder="Password" class="display" data-passwordDisplay>
 
-            <button data-copy>
-                <span data-copyMsg></span>
+            <button class="copyBtn" data-copy>
+                <span class="tooltip" data-copyMsg></span>
                 <img src="./assets/copy.svg" alt="copy" width="23" height="23">
             </button>
             
@@ -43,25 +45,25 @@
             </div>
             
             <!--slider-->
-            <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+            <input type="range" min="1" max="20" class="slider" step="1" data-lengthslider="" style="background-size: 47.3684% 100%;">
 
             <!-- checkboxes-->
-            <div>
+            <div class="check">
                 <input type="checkbox" id="uppercase">
                 <label for="uppercase">Includes Uppercase letters</label>
             </div>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="lowercase">
                 <label for="lowercase">Includes Lowercase letters</label>
             </div>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="numbers">
                 <label for="numbers">Includes Numbers </label>
             </div>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="symbols">
                 <label for="symbols">Includes Symbols </label>
             </div>
@@ -69,7 +71,7 @@
             <!-- strength section-->
             <div class="strength-container">
                 <p>Strength</p>
-                <div class="indicator" data-indicator></div>
+                <div class="indicator" data-indicator="" style="background-color: rgb(204, 204, 204); box-shadow: rgb(204, 204, 204) 0px 0px 12px 1px;"></div>
             </div>
 
             <!-- generate password-->
